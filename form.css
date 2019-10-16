@@ -183,6 +183,8 @@ box-shadow: inset 12px 18px 40px -29px rgba(0,0,0,0.75);
 
 #task-frontend input[type="submit"] {
   align-content: center;
+  font-family: 'Red Hat Text', sans-serif;
+  text-shadow: 2px 2px 7px rgba(0,0,0,0.61);
 	color: white;
   text-shadow: 2px 2px 7px rgba(0,0,0,0.61);
 	margin-top: 15px;
