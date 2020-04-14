@@ -1,0 +1,391 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+#parallax{
+    background-image: url(act/act3.jpg);
+    background-size:cover;
+    background-position: top;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+div.menu-toggle {
+    width: auto;
+    height: auto;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 1%;
+    z-index: 100;
+    transition: 0.6s;
+
+}
+header .logo{
+    display: none;
+    transition: 0.6s;
+    margin: 0;
+}
+header.sticky img{
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    
+    height: 100%;
+    
+    
+    z-index: 10000;
+}
+header.sticky {
+    background: rgb(255, 255, 255);
+    
+    margin: 0;
+}
+header nav {
+    float: right;
+}
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+header nav ul li {
+    list-style: none;
+    
+}
+header nav ul li a {
+    background-color: rgb(230, 230, 230);
+    padding: 10px 20px;
+    margin: 5px 10px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: solid 1px gray;
+    display: block;
+    transition: .5s;
+}
+header nav ul li a i {
+    height: 18px;
+}
+header nav ul li a:hover,
+header nav ul li a.active
+ {
+    
+    background: rgb(255, 255, 255);
+}
+.menu-toggle {
+    margin:1%;
+    padding: 10px;
+    border: 1px solid gray;
+    color: black;
+    float: right;
+    
+    cursor: pointer;
+    display: none;
+    width: 100%;
+    transition: .5s;
+    
+}
+.menu-toggle:hover{
+    background: rgba(199, 199, 199, 0.548);
+}
+@media (max-width: 1300px) {
+    header {
+        padding: 5px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    header nav {
+        
+        position: absolute;
+        margin: 0 auto;
+        width: 100%;
+        background: rgba(245, 245, 245, 0.801);
+        top:60px;
+        left: -100%;
+        opacity: 1;
+        transition: .5s;
+
+    }
+    header nav.active {
+        left: 0;
+    }
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+    header nav ul li {
+        width: 60%;
+        margin:25px auto;
+    }
+    header nav ul li a:hover {
+        background: rgba(199, 199, 199, 0.548);
+
+    }
+}
+footer {
+    display: grid;
+    width: auto;
+    padding:5% 5%;
+    padding-bottom: 0;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit ,minmax(280px ,1fr));
+   
+    
+}
+footer img {
+    max-width: 300px;
+    min-width: 200px;
+}
+footer section {
+    text-align: center;
+    text-decoration: none;
+    
+    height: 100%;
+    margin-top:10% ;
+}
+.data {
+    border-left: solid 1px #007e7e;
+    border-right: solid 1px #007e7e;
+
+}
+footer div a{
+    text-decoration: none;
+    color: black;
+}
+footer div {
+    text-align: center;
+    line-height: 150%;
+}
+h4 {
+    font-weight: bold;
+    padding-bottom: 2%;
+    
+}
+
+.lg {
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.534) ;
+    display: flex;
+    justify-content: center;
+}
+#parallax .lg img {
+    max-width: 30%;
+    min-width: 300px; 
+}
+.container {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    background: white;
+    padding: 0 5%;
+
+}
+.container h1 {
+    text-align: center;
+    margin: 3% auto;
+    width: auto;
+    height: auto;
+    line-height: 50px;
+    letter-spacing: 10px;
+    font-size: 1.9em;
+    text-decoration: transparent;
+    text-transform: uppercase;
+}
+.container h1 hr  {
+    margin: 2% auto;
+    border: 0;
+    height: 1px;
+    width: 60%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #007e7e, rgba(0, 0, 0, 0));
+}
+.act{
+    float: right;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+
+}
+.content h3 {
+    margin: 3% 0;
+    height: auto;
+    line-height: 50px;
+    width: auto;
+    min-width: 230px;
+    color: #007e7e;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-decoration: transparent;
+}
+.content h3::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    margin: 0 auto;
+    background:#007e7e;
+    
+    transition: width .5s;
+    
+}
+.content:hover h3::after  {
+    width: 100%;
+    margin: 0 auto;
+    transition: width 1.5s;
+    font-weight: bold;
+}
+.content p {
+    text-align: justify;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+.act li{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.act li img{
+    
+    
+    width: 50%;
+    height: 100%;
+ 
+    
+}
+.photos{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.content {
+    width: 50%;
+    min-width: 350px;
+    padding: 5%;
+    
+}
+
+
+
+@media (max-width:1450px){
+    
+    .content p {
+        text-align: justify;
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+    .act li{
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        margin-bottom: 5px;
+    }
+    .act li img{
+        
+        
+        width: 100%;
+        height: auto;
+    }
+    .act .content {
+        width: 100%;
+        min-width: 350px;
+        padding: 5%;
+        
+    }
+    .lg {
+        width: 100%;
+        background-color:rgba(255, 255, 255, 0.534) ;
+        display: flex;
+        justify-content: center;
+        max-height: 150px;
+    }
+    
+}
+@media (max-width:450px){
+    
+    .content p {
+        text-align: justify;
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+    .act li{
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        margin-bottom: 5px;
+    }
+    .act li img{
+        width: 100%;
+        height: 190px;
+    }
+    .act .content {
+        width: 100%;
+        min-width: 350px;
+        padding: 5%;
+        
+    }
+    #parallax .lg img {
+        max-width: 30%;
+        min-width: 300px; 
+        max-height: 130px;
+    }
+    .lg {
+        width: 100%;
+        background-color:rgba(255, 255, 255, 0.534) ;
+        display: flex;
+        justify-content: center;
+        
+    }
+  
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

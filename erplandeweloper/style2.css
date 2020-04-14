@@ -1,0 +1,357 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+#parallax{
+    background-image: url(act/act4.jpg);
+    background-size:cover;
+    background-position: top;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    height: 35vw;
+    width: 100%;
+    overflow: hidden;
+}
+div.menu-toggle {
+    width: auto;
+    height: auto;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 1%;
+    z-index: 100;
+    transition: 0.6s;
+
+}
+header img.logo {
+    display: none;
+    transition: 0.6s;
+    margin: 0;
+}
+header.sticky img{
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    
+    height: 100%;
+    
+    
+    z-index: 10000;
+}
+header.sticky {
+    background: rgb(255, 255, 255);
+    
+    margin: 0;
+}
+header nav {
+    float: right;
+}
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+header nav ul li {
+    list-style: none;
+    
+}
+header nav ul li a {
+    background-color: rgb(230, 230, 230);
+    padding: 10px 20px;
+    margin: 5px 10px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: solid 1px gray;
+    display: block;
+    transition: .5s;
+}
+header nav ul li a i {
+    height: 18px;
+}
+header nav ul li a:hover,
+header nav ul li a.active
+ {
+    
+    background: rgb(255, 255, 255);
+}
+.menu-toggle {
+    margin:1%;
+    padding: 10px;
+    border: 1px solid gray;
+    color: black;
+    float: right;
+    
+    cursor: pointer;
+    display: none;
+    width: 100%;
+    transition: .5s;
+    
+}
+.menu-toggle:hover{
+    background: rgba(199, 199, 199, 0.548);
+}
+@media (max-width: 1300px) {
+    header {
+        padding: 5px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    header nav {
+        
+        position: absolute;
+        margin: 0 auto;
+        width: 100%;
+        background: rgba(245, 245, 245, 0.801);
+        top:60px;
+        left: -100%;
+        opacity: 1;
+        transition: .5s;
+
+    }
+    header nav.active {
+        left: 0;
+    }
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+    header nav ul li {
+        width: 60%;
+        margin:25px auto;
+    }
+    header nav ul li a:hover {
+        background: rgba(199, 199, 199, 0.548);
+
+    }
+}
+footer {
+    display: grid;
+    width: auto;
+    padding:5% 5%;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit ,minmax(280px ,1fr));
+   
+    
+}
+footer img {
+    max-width: 300px;
+    min-width: 200px;
+}
+footer section {
+    text-align: center;
+    text-decoration: none;
+   
+    height: 100%;
+    margin-top:10% ;
+}
+.data {
+    border-left: solid 1px #007e7e;
+    border-right: solid 1px #007e7e;
+
+}
+footer div a{
+    text-decoration: none;
+    color: black;
+}
+footer div {
+    text-align: center;
+    line-height: 150%;
+}
+h4 {
+    font-weight: bold;
+    padding-bottom: 2%;
+    
+}
+
+h1 {
+    text-align: center;
+    margin: 3% auto;
+    width: auto;
+    height: auto;
+    line-height: 50px;
+    letter-spacing: 10px;
+    font-size: 1.9em;
+    text-decoration: transparent;
+    text-transform: uppercase;
+}
+h1 hr  {
+    margin: 2% auto;
+    border: 0;
+    height: 1px;
+    width: 60%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #007e7e, rgba(0, 0, 0, 0));
+}
+.title {
+    width: 100%;
+    padding: 2% 0;
+    min-width: 250px;
+    background-color:rgba(255, 255, 255, 0.534);
+    height: auto;
+}
+.title h2 {
+    text-align: center;
+    margin: auto auto ;
+    color: #000000;
+    width: auto;
+    min-width: 375px;
+    height: auto;
+    letter-spacing: 2vw;
+    font-size: 4vw;
+    text-decoration: transparent;
+    text-transform: uppercase;
+}
+.container h3 {
+    text-align: center;
+    margin: auto auto ;
+    margin: 3%;
+    height: auto;
+    line-height: 50px;
+    color: #007e7e;
+    font-size: 2em;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-decoration: transparent;
+    width: auto;
+    
+}
+.container h3::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    margin: 0 auto;
+    background:#007e7e;
+    
+    transition: width .5s;
+    
+}
+.container:hover h3::after  {
+    width: 50%;
+    margin: 0 auto;
+    transition: width 1.5s;
+    font-weight: bold;
+}
+.description{
+    width: 90%;
+    margin: 3% auto;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.fas {
+    transition: transform 0.5s;
+    box-sizing: border-box;
+}
+.description li:nth-child(1):hover .fa-drafting-compass,.description li:nth-child(2):hover .fa-home,.description li:nth-child(3):hover .fa-check,.location li:nth-child(1):hover .fa-map-marker-alt{
+    
+    transform: rotate(360deg);
+    color: #007e7e;
+    
+    
+}
+
+
+.description li {
+    width: 30%;
+    min-width: 350px;
+}
+.description li p{
+    font-size: 16px;
+     padding: 2%;
+}
+.description li i {
+    color: rgba(17, 17, 17, 0.657);
+    
+    padding: 3%;
+    font-size: 3em;
+    text-decoration: transparent;
+}
+.description-1 {
+    margin-top: 3%;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.698);
+    padding: 3% 15%;
+}
+.location{
+    width: 90%;
+    text-align: center;
+    list-style: none;
+    margin: 3% auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.location li i {
+    color: rgba(17, 17, 17, 0.657);
+    
+    padding:3%;
+    font-size: 3em;
+    text-decoration: transparent;
+}
+.location li{
+    width: 40%;
+    min-width: 350px;
+    padding: 0 2%;
+}
+.location li p {
+    font-size: 19px;
+    
+}
+#map {
+    position: relative;
+    padding-bottom: 75%; 
+    height: 0;
+    overflow: hidden;
+}
+#map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    
+    flex-wrap: wrap;
+}
+.gallery a {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.gallery img {
+    transition: transform 2s;
+    width: 400px;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.gallery img:hover {
+    transform: scale(1.1);
+}
